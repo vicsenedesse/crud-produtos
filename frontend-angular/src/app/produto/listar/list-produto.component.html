@@ -1,6 +1,6 @@
 <app-nav></app-nav>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-<div class="card" style="margin-top: 40px; padding: 1%; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.49);">
+<div class="card" style="margin-top: 40px; padding: 1%; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.49); margin-left: 1%; margin-right: 1%;">
 
     <div class="card" id="busca" style="margin-bottom: 40px;">
         <div class="row" style="margin-top: 30px; margin-left: 30px; width: 100%;">
@@ -18,21 +18,24 @@
               </svg>
               <select id="buscar" class="form-control" placeholder="Filtrar por Categoria" [(ngModel)]="filter2" style="width: 80%; margin-left: 15px;">
                     <!-- <option value="" [selected]> Filtrar por Categoria</option> -->
-                    <option value='' selected> Filtrar por Categoria</option>
+                    <option value='' selected> ...</option>
+                    <option value='Alimentos'>Alimentos</option>
                     <option value='Beleza'>Beleza</option>
-                    <option value='Domésticos'>Domésticos</option>
                     <option value='Eletrônicos'>Eletrônicos</option>
                     <option value='Esporte'>Esporte</option>
                     <option value='Higiene'>Higiene</option>
-                    <option value='Música'>Música</option>
                     <option value='Limpeza'>Limpeza</option>
+                    <option value='Móveis'>Móveis</option>
+                    <option value='Música'>Música</option>
+                    <option value='Petshop'>Petshop</option>
                     <option value='Roupas'>Roupas</option>
+                    
                 </select>
             </div>
         </div>
     </div>
 
-<table class="table table-hover">
+<table class="table table-hover" >
     <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
@@ -52,7 +55,7 @@
       <td *ngIf="produto.data == 'Disponível'">{{ produto.data }}</td>
       <td>R$ {{ produto.preco}}</td>
       <td>{{ produto.categoria}}</td>
-      <td><button id="edit" class="btn" (click)="update(produto.id)"><i class="bi bi-pen" style="color:#00692C; font-size: larger;"></i></button>&nbsp;<button id="trash" class="btn" (click)="delete(produto)"><i class="bi bi-trash" style="color: #9C1010; font-size: larger;"></i></button></td>
+      <td><button id="edit" class="btn" (click)="update(produto.id)"><i class="bi bi-pen" style="color:#1b294e; font-size: larger;"></i></button>&nbsp;<button id="trash" class="btn" (click)="delete(produto)"><i class="bi bi-trash" style="color: #5c1111; font-size: larger;"></i></button></td>
     </tr>
     </tbody>
   </table>
