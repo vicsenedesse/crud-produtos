@@ -14,16 +14,16 @@ CREATE TABLE produto (
 
 
 INSERT INTO produto(id, descricao, data, preco, categoria) 
-VALUES (1,'Notebook AVELL i7 8GB GeForce RTX 3070','27/08/2021','19.996,00', 'Eletrônicos');
+VALUES (1,'Notebook AVELL i7 8GB GeForce RTX 3070','2021-08-27','19.996,00', 'Eletrônicos');
 
 INSERT INTO produto(id, descricao, data, preco, categoria) 
-VALUES (2,'Delineador Cat Eyes Thin - Spot - MariMaria','24/09/2021','45,90', 'Beleza');
+VALUES (2,'Delineador Cat Eyes Thin - Spot - MariMaria','2021-09-24','45,90', 'Beleza');
 
 INSERT INTO produto(id, descricao, data, preco, categoria) 
-VALUES (3,'Violão Acústico Giannini N-14 Start Nylon Natural','14/10/2021','379,91', 'Música');
+VALUES (3,'Violão Acústico Giannini N-14 Start Nylon Natural','2021-10-04','379,91', 'Música');
 
 INSERT INTO produto(id, descricao, data, preco, categoria) 
 VALUES (4,'Engenharia de Software Moderna Capa comum – 1 junho 2020', 'Disponível', '65,95', 'Livros');
 
 INSERT INTO produto(id, descricao, data, preco, categoria) 
-VALUES (5,'Avril Lavigne Let Go Cd 2002','20/10/2021','45,33', 'Música');
+VALUES (5,'Avril Lavigne Let Go Cd 2002','2021-10-20','45,33', 'Música');
