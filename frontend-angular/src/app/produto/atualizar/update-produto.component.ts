@@ -30,7 +30,7 @@ export class UpdateProdutoComponent implements OnInit {
       .subscribe((data) => {
         console.log(data)
         this.prod = data;
-        this.prod.data = "";
+        // this.prod.data = "";
       }, (error: any) => console.log(error));
 
   }
@@ -41,6 +41,10 @@ export class UpdateProdutoComponent implements OnInit {
     this.prod = new Produto();
     this.router.navigate(['/listagem']);
     
+  }
+
+  refresh(): void {
+    window.location.reload();
   }
 
 }

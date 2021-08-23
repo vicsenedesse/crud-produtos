@@ -14,7 +14,7 @@
 
           <div class="form-group col-md-4">
               <label for="inputPrec">Preço</label>
-              <input type="text" class="form-control" id="inputPrec" placeholder="R$ 0.000,00" required [(ngModel)]="prod.preco" name="preco">
+              <input type="text" class="form-control" id="preco" placeholder="R$ 0.000,00" required [(ngModel)]="prod.preco" name="preco">
           </div>
           
 
@@ -27,7 +27,7 @@
                 <mat-datepicker #picker></mat-datepicker>
               </mat-form-field> -->
             <label for="inputCity">Data da Compra</label>
-            <input type="text" class="form-control" id="inputCity"  placeholder="mm/dd/yyyy" [(ngModel)]="prod.data" name="data">
+            <input type="date" data-date-format="DD-MM-YYYY HH:mm:ss"  pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" min="01-01-1997" max="31-12-2030" class="form-control" id="inputCity"  placeholder="dd/mm/yyyy" [(ngModel)]="prod.data" name="data">
             <span class="input-group-addon">
                 <span class="glyphicon glyphicon-calendar"></span>
             </span>
@@ -53,6 +53,14 @@
             </select>
           </div>
         </div>
-        <button id="cadastrar" type="submit" class="btn btn-primary" routerLinkActive="router-link-active">Cadastrar Produto</button>
+        <button id="cadastrar" type="submit" class="btn btn-primary" routerLinkActive="router-link-active">Salvar Alterações</button>
       </form>
 </div>
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script> -->
+<script type="text/javascript"> 
+  $(document).ready(function(){
+    $('#preco').mask('R$ 000.000,00');
+  });
+    // $('#preco').maskMoney({symbol:'R$ ', thousands:'.', decimal:',', symbolStay: true});
+  
+</script>

@@ -43,10 +43,11 @@
     </tr>
     </thead>
     <tbody>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
     <tr *ngFor="let produto of filteredProduto | sort: 'categoria'">
       <td>{{ produto.id }}</td>
       <td>{{ produto.descricao }}</td>
-      <td>{{ produto.data }}</td>
+      <td>{{ produto.data | date: 'dd/MM/yyyy'}}</td>
       <td>R$ {{ produto.preco}}</td>
       <td>{{ produto.categoria}}</td>
       <td><button id="edit" class="btn" (click)="update(produto.id)"><i class="bi bi-pen" style="color:#00692C; font-size: larger;"></i></button>&nbsp;<button id="trash" class="btn" (click)="delete(produto)"><i class="bi bi-trash" style="color: #9C1010; font-size: larger;"></i></button></td>

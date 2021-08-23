@@ -125,4 +125,8 @@ searchText!: any;
   get filter2() { 
     return this._filterBy2;
   }
+
+  refresh(): void {
+    window.location.reload();
+  }
 }
