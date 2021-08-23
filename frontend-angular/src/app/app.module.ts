@@ -13,8 +13,18 @@ import { ListProdutoComponent } from './produto/listar/list-produto.component';
 import { SortPipe } from './pipe/pipe.component';
 import { ProdutoService } from './service/produto.service';
 import { UpdateProdutoComponent } from './produto/atualizar/update-produto.component';
+import { CurrencyMaskConfig, CurrencyMaskModule, CURRENCY_MASK_CONFIG } from 'ng2-currency-mask';
 // import {MatDatepickerModule} from '@angular/material/datepicker';
 
+export const CustomCurrencyMaskConfig: CurrencyMaskConfig = {
+  align: "left",
+  allowNegative: true,
+  decimal: ",",
+  precision: 2,
+  prefix: "R$ ",
+  suffix: "",
+  thousands: "."
+};
 
 @NgModule({
   declarations: [
@@ -37,10 +47,12 @@ import { UpdateProdutoComponent } from './produto/atualizar/update-produto.compo
     ReactiveFormsModule,
     FormsModule,
     NgbModule,
-    // MatDatepickerModule
+    CurrencyMaskModule
+
   ],
   providers: [
-    ProdutoService
+    ProdutoService,
+    { provide: CURRENCY_MASK_CONFIG, useValue: CustomCurrencyMaskConfig }
   ],
   bootstrap: [AppComponent]
 })

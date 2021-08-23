@@ -39,7 +39,10 @@ export class UpdateProdutoComponent implements OnInit {
     this.produtoService.update(this.id, this.prod)
     .subscribe(data => console.log(data), error => console.log(error));
     this.prod = new Produto();
-    this.router.navigate(['/listagem']);
+    this.router.navigate(['/listagem'])
+    .then(() => {
+      window.location.reload();
+    });
     
   }
 
