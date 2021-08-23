@@ -1,6 +1,6 @@
 # crud-produtos
 
-### Este projeto é um CRUD de produtos contedo os atributos:
+### Este projeto é um CRUD de produtos contendo os atributos:
 
 > Descrição;
 > 
