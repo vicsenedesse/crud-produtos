@@ -1,0 +1,58 @@
+<app-nav></app-nav>
+
+<div class="card" [hidden]="submitted" style="padding: 3%; margin:40px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.49); margin: 5%;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-row">
+
+          <div class="form-group col-md-12">
+              <label for="inputDescr">Descrição</label>
+              <input type="text" class="form-control" id="inputDescr" placeholder="Descrição do Produto" required [(ngModel)]="prod.descricao" name="descricao">
+          </div>
+         
+        </div>
+        <div class="form-row">
+
+          <div class="form-group col-md-4">
+              <label for="inputPrec">Preço</label>
+              <input type="text" class="form-control" id="inputPrec" placeholder="R$ 0.000,00" required [(ngModel)]="prod.preco" name="preco">
+          </div>
+          
+
+          <div class="form-group col-md-4">
+
+            <!-- <mat-form-field appearance="fill">
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field> -->
+            <label for="inputCity">Data da Compra</label>
+            <input type="text" class="form-control" id="inputCity"  placeholder="mm/dd/yyyy" [(ngModel)]="prod.data" name="data">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker1').datetimepicker();
+                });
+             </script>
+          </div>
+
+          <div class="form-group col-md-4">
+            <label for="inputState">Categoria</label>
+            <select id="inputState" class="form-control" required [(ngModel)]="prod.categoria" name="categoria">
+              <option selected>...</option>
+              <option>Beleza</option>
+              <option>Domésticos</option>
+              <option>Eletrônicos</option>
+              <option>Esporte</option>
+              <option>Higiene</option>
+              <option>Música</option>
+              <option>Limpeza</option>
+              <option>Roupas</option>
+            </select>
+          </div>
+        </div>
+        <button id="cadastrar" type="submit" class="btn btn-primary" routerLinkActive="router-link-active">Cadastrar Produto</button>
+      </form>
+</div>

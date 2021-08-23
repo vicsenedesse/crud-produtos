@@ -5,7 +5,7 @@ USE db_produtos;
 CREATE TABLE produto (
   id INT AUTO_INCREMENT NOT NULL,
   descricao VARCHAR(255) NOT NULL,
-  data VARCHAR(10),
+  data VARCHAR(10) DEFAULT 'Disponível',
   preco VARCHAR(20) NOT NULL,
   categoria VARCHAR(50) NOT NULL,
 

@@ -1,0 +1,31 @@
+input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1.8px solid rgb(12, 12, 207);
+    border-radius: 0%;
+}
+input:focus{
+    -webkit-box-shadow: none;
+    border-color: rgb(171, 141, 247);
+}
+
+select{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1.8px solid rgb(12, 12, 207);
+    border-radius: 0%;
+}
+select:focus{
+    -webkit-box-shadow: none;
+    border-color: rgb(171, 141, 247);
+}
+
+#cadastrar{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 0%;
+    background-color: rgb(25, 25, 105);
+    border: none;
+}

@@ -1,0 +1,29 @@
+#busca{
+    border: none;
+}
+
+#adicionar{
+    background-color: rgb(34, 34, 39);
+    color: aliceblue;
+    border-radius: 0px;
+}
+
+#buscar{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1.8px solid rgb(12, 12, 207);
+    border-radius: 0%;
+}
+#buscar:focus{
+    -webkit-box-shadow: none;
+    border-color: rgb(171, 141, 247);
+}
+
+#edit{
+    -webkit-box-shadow: none;
+}
+
+#trash{
+    -webkit-box-shadow: none;
+}
